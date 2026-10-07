@@ -1,6 +1,6 @@
 import unittest
 
-from greeting import greet, multiply
+from greeting import greet, multiply, subtract
 
 
 class GreetingTests(unittest.TestCase):
@@ -18,6 +18,18 @@ class GreetingTests(unittest.TestCase):
 
     def test_multiply_zero(self):
         self.assertEqual(multiply(0, 9), 0)
+
+    def test_subtract_positive_result(self):
+        self.assertEqual(subtract(4, 3), 1)
+
+    def test_subtract_zero(self):
+        self.assertEqual(subtract(0, 0), 0)
+
+    def test_subtract_negative_result(self):
+        self.assertEqual(subtract(3, 4), -1)
+
+    def test_subtract_negative_and_positive_numbers(self):
+        self.assertEqual(subtract(-3, 4), -7)
 
 
 if __name__ == "__main__":
