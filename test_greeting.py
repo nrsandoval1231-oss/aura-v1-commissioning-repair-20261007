@@ -25,6 +25,12 @@ class GreetingTests(unittest.TestCase):
     def test_subtract_zero(self):
         self.assertEqual(subtract(0, 0), 0)
 
+    def test_subtract_negative_result(self):
+        self.assertEqual(subtract(3, 4), -1)
+
+    def test_subtract_negative_and_positive_numbers(self):
+        self.assertEqual(subtract(-3, 4), -7)
+
 
 if __name__ == "__main__":
     unittest.main()
